@@ -1,0 +1,130 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+}
+
+
+/* ------------------------------------------- Footer -------------------------------------- */
+footer {
+    max-width: 100%;
+    margin-top: 2%;
+    bottom: 0;
+    padding: 1% 5%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+}
+
+/* ------------------------------------------- Footer Container -------------------------------------- */
+.footer__container {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+/* ----------------------------- Company Logo Circle "Byting part"-------------------------------------- */
+.company__info .logo__design .logo__circle{
+    position: absolute;
+    z-index: 1;
+    margin-top: 4px;
+    margin-left: -18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    /* border-top-right-radius: 0%; */
+    /* border-top-left-radius: 0%; */
+    /* border-bottom-left-radius: 0%; */
+    /* border-right: 0%; */
+    background-color: var(--main-color);
+    /* background-color: #fff; */
+}
+
+
+/* ------------------------------------------- Company info -------------------------------------- */
+.company__info {
+    max-width: 20%;
+    padding-bottom: 3%;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.company__info article {
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+
+/* ------------------------------------------- Connect with us -------------------------------------- */
+.connect_with_us p {
+    padding: 10px 0 0 5px;
+}
+
+.connect_with_us p a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.connect_with_us p a:hover {
+    text-decoration: underline;
+}
+
+.connect_with_us p i {
+    /* color: var(--main-color-hover); */
+    color: black;
+    font-size: 16px;
+}
+
+/* ------------------------------------------- Places we Serves -------------------------------------- */
+.places_we_serves p {
+    padding-top: 6px;
+    padding-left: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+/* ------------------------------------------- Copy Right -------------------------------------- */
+.copy__right p {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.copy__right p span {
+    color: black;
+    font-size: 16px;
+}
+
+
+/* ------------------------------- Responsive for Phone -------------------------- */
+@media only screen and (max-width: 370px) {
+
+    /* ------------------------------------------- Footer Container -------------------------------------- */
+    .footer__container {
+        max-width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: hidden;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    /* ------------------------------------------- Company info -------------------------------------- */
+    .company__info {
+        max-width: 100%;
+        padding-bottom: 3%;
+        padding-right: 0px;
+        overflow: hidden;
+    }
+
+    /* ------------------------------------------- Connect with us -------------------------------------- */
+    .connect_with_us,.places_we_serves,footer hr  {
+        margin-top: 3%;
+    }
+}

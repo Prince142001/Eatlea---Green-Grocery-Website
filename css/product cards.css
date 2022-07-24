@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+}
+
+section {
+    width: 79%;
+}
+
+section .product__cards {
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-top: 10px;
+}
+
+
+.product__cards .product_card {
+    position: relative;
+    width: calc(20% - 10px);
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.product__cards .product_card:hover{
+    overflow: visible;
+}
+
+.product__cards .product_card:hover .product_content{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    margin-top: -18%;
+    box-shadow: 0px -4px 10px 0px rgba(0,128,128,0.20);
+    transition: all 0.2s ease;
+}
+
+
+.product__cards .product_card:hover .product_card_buttons {
+    bottom: -44%;
+    transition: all 0.2s ease;
+}
+
+.product__cards .product_card:hover img{
+    transform: scale(0.9);
+    transition: all 0.2s ease;
+}
+
+/* --------------------------- Image ------------------------- */
+.product__cards .product_card img {
+    padding: 10px;
+    width: 100%;
+}
+
+/* --------------------------- Product Card Content ------------------------- */
+.product__cards .product_card .product_content {
+    position: relative;
+    padding: 10px 20px 22px 20px;
+}
+
+.product_content .row a {
+    text-decoration: none;
+}
+
+/* --------------------------- Product Card Details ------------------------- */
+.product_content .row a>.product_card_detail>p {
+    color: #111;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.product_content .row a>.product_card_detail {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+}
+
+.row a>.product_card_detail>.product_quntity_indicate {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product_card_detail>.product_quntity_indicate i {
+    margin-left: 8px;
+}
+
+.product_card_detail>.product_quntity_indicate span {
+    position: absolute;
+    top: 0;
+    margin-top: -25px;
+    margin-left: -78px;
+    width: fit-content;
+    color: #111;
+    background-color: #fff;
+    box-shadow: 0 0 2px 1.5px var(--main-color-hover);
+    border-radius: 1.5px;
+    padding: 6px 5px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 0.2s ease;
+}
+
+.product_card_detail>.product_quntity_indicate span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 55%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--main-color-hover) transparent transparent transparent;
+}
+
+.product_card_detail>.product_quntity_indicate i:hover span {
+    transform: scale(1);
+}
+
+/* --------------------------- Product Price ------------------------- */
+.product_content .row a>.product_price>p {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.row a>.product_price>p>span {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: var(--main-color-hover);
+}
+
+/* ---------------------- Buttons ---------------------- */
+.product_content .product_card_buttons {
+    position: absolute;
+    width: 100%;
+    bottom: -80%;
+    margin-left: -20px;
+    padding: 8px 14px 10px 16px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_content .product_card_buttons button {
+    position: relative;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product_card_buttons button:first-child {
+    color: var(--main-color);
+    background-color: #fff;
+    width: 70%;
+}
+
+.product_card_buttons button:first-child:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.product_card_buttons button:last-child {
+    position: relative;
+    color: #fff;
+    background-color: var(--main-color);
+    width: 20%;
+}
+
+.product_card_buttons button:last-child:hover {
+    background-color: var(--main-color-hover);
+    border: 2px solid var(--main-color-hover);
+}
+
+.product_card_buttons button:last-child i {
+    animation: addToCartScalable 1s ease-in-out infinite alternate;
+}
+
+@keyframes addToCartScalable {
+    from {
+        transform: scale(1.3);
+    }
+
+    top {
+        transform: scale(1.1);
+    }
+}

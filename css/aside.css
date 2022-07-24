@@ -1,0 +1,107 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+    --body-bg-color: rgb(238, 234, 234);
+}
+
+/* main aside {
+    grid-area: aside;
+}
+
+main ul {
+    grid-area: breadcrumb;
+}
+
+main section {
+    grid-area: product__section;
+} */
+
+main {
+    position: relative;
+    max-width: 1500px;
+    width: 100%;
+    /* margin-top: 10px; */
+    margin: 80px auto 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* display: grid;
+    grid-template-areas:
+        'aside aside breadcrumb breadcrumb breadcrumb'
+        'aside aside product__section product__section product__section'
+        'aside aside product__section product__section product__section'
+        'aside aside product__section product__section product__section'
+        'aside aside product__section product__section product__section'
+    ;*/
+} 
+
+/* -------------------------------- Aside Element --------------------------- */
+main aside {
+    position: relative;
+    float: left;
+    padding: 14px 18px 20px;
+    max-width: 800px;
+    width: 20%;
+    height: 87.5vh;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+
+/* ---------------------------- Best Deal In Header --------------------------- */
+aside header {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 90%;
+}
+
+aside header span {
+    font-size: 38px;
+    font-weight: 600;
+}
+
+/* ---------------------------- Best Deal In Container --------------------------- */
+aside .best__deal__in__container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: baseline;
+    overflow: hidden;
+    margin: auto;
+    width: 280px;
+}
+
+aside .best__deal__in__container a {
+    width: 220px;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #111;
+}
+
+aside .best__deal__in__container a:hover {
+    color: #333;
+}
+
+.best__deal__in__container a>span {
+    position: absolute;
+    margin-top: 10px;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 5px;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.best__deal__in__container a:hover>span {
+    transform: scale(1);
+    margin-left: 10px;
+    color: #333;
+}

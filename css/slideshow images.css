@@ -1,0 +1,121 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+    --green-color: green;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+.imageSlides {
+    display: none;
+}
+
+.imageSlides img {
+    vertical-align: middle;
+    z-index: -1;
+}
+
+/* Slideshow container */
+.slideshow__container {
+    margin-top: 63px;
+    max-width: 994px;
+    width: 100%;
+    /* position: absolute; */
+    /* margin: auto; */
+}
+
+/* The dots/bullets/indicators */
+.slideshow__container__dot {
+    position: absolute;
+    /* display: flex;
+    flex-flow: row wrap; */
+    margin-top: -2.5%;
+    left: 48%;
+    background-color: var(--main-color);
+    padding: 3px 8px 2px;
+    border-radius: 50px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* .slideshow__container__dot > .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+} */
+
+.active {
+    background-color: white;
+    width: 50px;
+    border-radius: 20px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* ------------------------------- Responsive for tablets -------------------------- */
+@media only screen and (max-width: 768px) {
+    .slideshow__container__dot>.dot {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+/* ------------------------------- Responsive for Phone -------------------------- */
+@media only screen and (max-width: 370px) {
+    .slideshow__container{
+    margin-top: 60px;
+    }
+    .imageSlides img {
+        width: 50px;
+        overflow: hidden;
+        vertical-align: middle;
+        z-index: -1;
+    }
+
+    /* The dots/bullets/indicators */
+    .slideshow__container__dot {
+        position: absolute;
+        margin-top: -7%;
+        left: 48%;
+        background-color: transparent;
+        border-radius: 50px;
+    }
+
+    .slideshow__container__dot>.dot {
+        height: 8px;
+        width: 8px;
+        color: black;
+    }
+
+    .active {
+        background-color: gray;
+    }
+}

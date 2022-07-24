@@ -1,0 +1,227 @@
+.navbar {
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 13%;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+/* ------------------------------------------- Company Logo and Location -------------------------------------- */
+.logo__and__location {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ------------------------------- Logo design -------------------------- */
+.logo__design {
+    position: relative;
+    font-size: 28px;
+    font-family: 'Merriweather', serif;
+}
+
+.logo__design a {
+    color: rgb(1, 91, 1);
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+}
+
+.logo__design__eat {
+    text-shadow: #fff 0px 0px 1px;
+    font-weight: 600;
+}
+
+.logo__design__lea {
+    font-family: 'Cedarville Cursive', cursive;
+    /* font-family: 'Merriweather', serif; */
+    font-size: 32px;
+    /* border-radius: 5px; */
+    /* background-color: green; */
+    color: #fff;
+    font-weight: 300;
+}
+
+/* ----------------------------- Company Logo Circle "Byting part"-------------------------------------- */
+.logo__design .logo__circle{
+    position: absolute;
+    top: 0;
+    margin-top: 2px;
+    margin-left: -18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* border-top-right-radius: 0%; */
+    /* border-top-left-radius: 0%; */
+    /* border-bottom-left-radius: 0%; */
+    /* border-right: 0%; */
+    background-color: var(--main-color);
+    /* background-color: #fff; */
+}
+
+/* ------------------------------------------- Detect Location -------------------------------------- */
+.detect__location {
+    margin-left: 30px;
+}
+
+.detect__location button {
+    background-color: inherit;
+    color: #fff;
+    padding: 5px 14px;
+    border: none;
+    outline: none;
+    font-size: large;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--main-color-hover);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.detect__location button>i {
+    font-size: medium;
+    color: black;
+}
+
+/* ------------------------------- Hamburger -------------------------- */
+.navbar .hamburger i {
+    /* position: absolute; */
+    /* right: 10px; */
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* -------------------------------Navbar menu -------------------------- */
+
+.manu__content {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.manu__content li {
+    padding: 5px 14px;
+    list-style: none;
+}
+
+.manu__content li:hover {
+    background-color: var(--main-color-hover);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 370px) {
+    .navbar {
+        position: fixed;
+        max-width: 100%;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1px 3%;
+        background-color: var(--main-color);
+        color: #fff;
+    }
+
+    /* ------------------------------------------- Detect Location -------------------------------------- */
+    .detect__location {
+        margin-left: 13px;
+    }
+
+    .detect__location button {
+        background-color: inherit;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        font-size: x-small;
+        font-weight: 500;
+        line-height: 15px;
+        cursor: pointer;
+        background-color: var(--main-color-hover);
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .detect__location button i {
+        font-size: x-small;
+    }
+
+    .navbar .hamburger i {
+        display: block;
+        /* position: absolute; */
+        /* top: 100px; */
+    }
+
+    #click:checked~.hamburger i:before {
+        content: "\f00d";
+    }
+
+    .navbar .manu__content {
+        position: fixed;
+        top: 63px;
+        left: -100%;
+        background: var(--main-color-hover);
+        height: 100vh;
+        width: 70%;
+        text-align: left;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~.manu__content {
+        left: 0;
+    }
+
+    .navbar .manu__content li {
+        width: 70%;
+        margin: 5%;
+        /* margin: 10px 0; */
+    }
+
+    .navbar .manu__content li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked~.manu__content li a {
+        margin-left: 0px;
+    }
+
+    .navbar .manu__content li a.active,
+    .navbar .manu__content li a:hover {
+        background: none;
+        color: white;
+    }
+}

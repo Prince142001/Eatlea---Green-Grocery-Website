@@ -1,0 +1,96 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+}
+
+.product__details__detail .product__detail__acc {
+    max-width: 700px;
+    width: 100%;
+    margin: 40px 0 10px;
+    background-color: #fff;
+    padding: 25px 30px 30px;
+    border-radius: 5px;
+}
+
+.product__detail__acc nav {
+    position: relative;
+    height: 50px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ededed;
+    border-radius: 5px;
+}
+
+.product__detail__acc nav label {
+    position: relative;
+    /* margin-left: 10px; */
+    /* background-color: red; */
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#description:checked~nav label.description,
+#benefits:checked~nav label.benefits,
+#information:checked~nav label.information {
+    color: #fff;
+}
+
+.product__detail__acc input[type="radio"] {
+    display: none;
+}
+
+nav .accordion__slider {
+    position: absolute;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 33.3%;
+    border-radius: 5px;
+    z-index: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.1s ease;
+}
+
+#benefits:checked~nav .accordion__slider {
+    width: 30%;
+    left: 35%;
+}
+
+#information:checked~nav .accordion__slider {
+    left: 66%;
+    width: 34%;
+}
+
+
+nav label.information:hover {
+    background-color: var(--main-color-hover);
+    border-radius: 5px;
+}
+.product__detail__acc section .content {
+    display: none;
+    height: 200px;
+}
+
+section .content p {
+    border-top: 2.5px solid var(--main-color);
+    margin-top: 20px;
+    padding-top: 10px;
+    font-size: large;
+    font-weight: 400;
+}
+
+#description:checked~section .product__description,
+#benefits:checked~section .prodcut__benefits,
+#information:checked~section .product__information {
+    display: block;
+}

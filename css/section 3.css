@@ -1,0 +1,89 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+    --body-bg-color: rgb(238, 234, 234);
+}
+
+/* -------------------------------- Section 3   "Types of Products" -------------------------------------- */
+.product__types {
+    position: relative;
+    max-width: 1460px;
+    width: 100%;
+    margin: 18px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -------------------------------- Product "Vegitables" -------------------------------------- */
+.product__types .fluid__quad__card {
+    background-color: #fff;
+    padding: 8px 14px;
+    margin-left: 30px;
+    max-width: 35%;
+    width: 100%;
+}
+
+.product__types .product__vegitables:first-child {
+    margin-left: 0px;
+}
+
+/* -------------------------------- Product Heading -------------------------------------- */
+.fluid__quad__card .product__heading {
+    width: 100%;
+    padding: 13px 16px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--main-color);
+    /* background-color: #fff; */
+}
+
+.product__heading a {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+    transition: all 0.2s ease;
+}
+
+.product__heading a:hover {
+    color: var(--main-color-hover);
+    text-decoration: none;
+}
+
+.fluid__quad__card .fluid__quad__card__products {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    padding: 12px 15px 10px;
+}
+
+/* -------------------------------- Fluid quad card images -------------------------------------- */
+.fluid__quad__card .fluid__quad__card__product__level {
+    width: 40%;
+}
+
+.fluid__quad__card .fluid__quad__card__product__level img {
+    width: 100%;
+}
+
+.fluid__quad__card .fluid__quad__card__product__level .product__detail {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.fluid__quad__card__product__level .product__detail p {
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.fluid__quad__card__product__level .product__detail p span {
+    font-size: 11.5px;
+    margin-left: 2px;
+    text-decoration: line-through;
+    color: var(--main-color-hover);
+}

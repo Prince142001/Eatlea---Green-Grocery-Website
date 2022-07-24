@@ -1,0 +1,58 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+    --body-bg-color:rgb(238, 234, 234);
+}
+
+.best__deal__products{
+    position: relative;
+    max-width: 1460px;
+    width: 100%;
+    margin: 18px auto;
+    background-color: #fff;
+    padding: 13px 16px 10px;
+    /* border: 1px solid black; */
+    /* align-items: ; */
+    /* justify-content: ; */
+}
+
+/* -------------------------------- Product Heading -------------------------------------- */
+.best__deal__products .product__heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    padding: 5px 16px 2px;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.product__heading header{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.product__heading a{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.product__heading a:hover{
+    color: var(--main-color-hover);
+    text-decoration: none;
+}
+
+/* .best__deal__products{
+    padding: ;
+} */
+
+.best__deal__products .best__deal__products_images{
+    width: 100%;
+    /* padding: 0 16px 0; */
+}
+
+.best__deal__products .best__deal__products_images img{
+    width: 18%;
+    padding: 0 10px 0;
+}

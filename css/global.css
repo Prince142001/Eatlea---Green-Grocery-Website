@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+    --body-bg-color: #eaeded;
+}
+
+/* ------------------------------- Text selection color -------------------------- */
+::selection {
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/* ------------------------------- Custom scroll bar -------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color-hover);
+    cursor: grabbing;
+    transition: 0.2s linear;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg-color);
+}

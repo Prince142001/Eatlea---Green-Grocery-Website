@@ -1,0 +1,44 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+}
+
+/* ---------------------------- Breadcrumb --------------------------- */
+ul.breadcrumb {
+    position: relative;
+    /* float: right; */
+    width: 100%;
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #fff;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    height: fit-content;
+    overflow: hidden;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/* ---------------------------- Breadcrumb for "Product Detail Pages" --------------------------- */
+.product__detail__pages ul.breadcrumb{
+    margin-top: 75px;
+}

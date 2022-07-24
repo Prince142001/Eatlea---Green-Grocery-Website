@@ -1,0 +1,110 @@
+:root {
+    --main-color: teal;
+    --main-color-hover: #4c9e9e;
+}
+
+main{
+    position: relative;
+    max-width: 1460px;
+    width: 100%;
+    margin: 25px auto;
+}
+
+/* ------------------------------- Product Detail Page -------------------------- */
+section .product__detail__container{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 25px;
+    /* align-items: baseline; */
+}
+
+/* ------------------------------- Product Detail Picture -------------------------- */
+.product__detail__container .product__detail__pictures{
+    max-width: 30%;
+    width: 100%;
+}
+
+.product__detail__container .product__detail__pictures img{
+    width: 100%;
+    padding: 0px 20px;
+}
+
+/* ------------------------------- Product Details Detail -------------------------- */
+.product__detail__container .product__details__detail{
+    position: relative;
+    max-width: 70%;
+    width: 100%;   
+    padding: 0px 20px;
+    border-left: 1px solid rgba(0,128,128,0.4);
+    overflow: hidden;
+} 
+
+.product__detail__container .product__detail{
+    display: flex;
+    align-items: baseline;
+}
+
+.product__detail__container .product__detail>p{
+    color: #111;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.product__detail__container .product__detail .product_quntity_indicate{
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.product__detail__container .product__detail .product_quntity_indicate span {
+    position: absolute;
+    top: 0;
+    /* margin-top: -25px; */
+    margin-left: 5px;
+    /* float: right; */
+    width: 150px;
+    color: #111;
+    background-color: #fff;
+    box-shadow: 0 0 2px 1.5px var(--main-color-hover);
+    border-radius: 1.5px;
+    padding: 6px 5px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 0.2s ease;
+}
+
+.product__detail__container .product__detail .product_quntity_indicate span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--main-color-hover) transparent transparent;
+}
+
+.product__detail__container .product__detail .product_quntity_indicate i:hover span {
+    transform: scale(1);
+}
+
+.product__detail__container .product_price>p {
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product__detail__container .product_price>p>span {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: var(--main-color-hover);
+}
+
